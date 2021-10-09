@@ -3,7 +3,7 @@ async function save() {
         let data = {
             name: document.getElementById("name").value,
             birthDate: LocalDate.parse(document.getElementById("birthDate").value),
-            gender: toString(document.getElementById("gender").value),
+            gender: document.getElementById("gender").value
         };
         let res = await $.ajax({
             url: "/api/students/add",

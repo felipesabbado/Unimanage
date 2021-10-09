@@ -2,12 +2,10 @@ package com.iade.unimanage.controllers;
 
 import java.util.List;
 
-import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
-
 import com.iade.unimanage.models.Student;
 import com.iade.unimanage.models.StudentRepository;
+import com.iade.unimanage.models.exceptions.NotFoundException;
 
-import org.apache.catalina.connector.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
@@ -30,23 +28,25 @@ public class StudentController {
         return StudentRepository.getStudents();
     }
 
-    @GetMapping(path = "/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Student getStudent(@PathVariable("number") int number){
+    @GetMapping(path = "{number}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Student getStudent(@PathVariable("number") int number) throws NotFoundException{
         logger.info("Getting student #" + number);
-        return StudentRepository.getStudent(number);
+        Student student = StudentRepository.getStudent(number);
+        if (student != null) return student;
+        else throw new NotFoundException("" + number, "Student", "number");
     }
 
-    /*@DeleteMapping(path = "/delete/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(path = "{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteStudent(@PathVariable("number") int number){
         logger.info("Deleting student #" + number);
-        if (StudentRepository.deleteStudent(number)){
+            if (StudentRepository.deleteStudent(number)){
             return new Response(number + " was deleted.", null);
         } else {
             return new Response(number + " not found.", null);
         }
-    }*/
+    }
 
-    @PostMapping(path = "/add", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Student addStudent(@RequestBody Student student){
         logger.info("Added student " + student.getName());
         StudentRepository.addStudent(student);
