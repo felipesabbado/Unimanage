@@ -6,7 +6,7 @@ async function save() {
             gender: document.getElementById("gender").value
         };
         let res = await $.ajax({
-            url: "/api/students/add",
+            url: "/api/students",
             data: JSON.stringify(data),
             method: "post",
             contentType:"application/json",
