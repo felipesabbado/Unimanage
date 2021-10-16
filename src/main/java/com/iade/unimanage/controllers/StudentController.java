@@ -39,7 +39,7 @@ public class StudentController {
     @DeleteMapping(path = "{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteStudent(@PathVariable("number") int number){
         logger.info("Deleting student #" + number);
-            if (StudentRepository.deleteStudent(number)){
+        if (StudentRepository.deleteStudent(number)){
             return new Response(number + " was deleted.", null);
         } else {
             return new Response(number + " not found.", null);

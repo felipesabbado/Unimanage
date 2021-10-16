@@ -18,15 +18,18 @@ public class StudentRepository {
     }
 
     public static List<Student> getStudents() { return students; }
+    
     public static Student getStudent(int number) {
         for (Student student: students)
             if (student.getNumber() == number)
                 return student;
         return null;
     }
+    
     public static boolean deleteStudent(int number){
         return students.removeIf((s) -> s.getNumber() == number);
     }
+    
     public static Student addStudent(Student student) {
         students.add(student);
         return student;
