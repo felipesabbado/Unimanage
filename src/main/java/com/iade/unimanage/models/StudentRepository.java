@@ -25,14 +25,7 @@ public class StudentRepository {
         return null;
     }
     public static boolean deleteStudent(int number){
-        //return students.removeIf((s) -> s.getNumber() == number);
-        for(int i = 0; i < students.size(); i++){
-            if(students.get(i).getNumber() == number){
-                students.remove(i);
-                return true;
-            }
-        }
-        return false;
+        return students.removeIf((s) -> s.getNumber() == number);
     }
     public static Student addStudent(Student student) {
         students.add(student);
