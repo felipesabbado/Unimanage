@@ -7,13 +7,13 @@ public class Unit {
     private int id;
     private String name;
     private int credits;
-    private ArrayList<Student> students;
+    private ArrayList<Enrolment> enrolments;
 
     public Unit(String name, int credits) {
         this.id = nextId;
         this.name = name;
         this.credits = credits;
-        students = new ArrayList<Student>();
+        enrolments = new ArrayList<Enrolment>();
         nextId++;
     }
 
@@ -25,7 +25,7 @@ public class Unit {
 
     public int getCredits() { return credits; }
 
-    public ArrayList<Student> getStudents() {
-        return students;
+    public ArrayList<Enrolment> getEnrolments() {
+        return enrolments;
     }
 }
