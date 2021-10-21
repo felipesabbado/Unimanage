@@ -32,7 +32,7 @@ public class Student {
     public char getGender() { return gender; }
     public void setGender(char gender) { this.gender = gender; }
     public int getNumber() { return number; }
-    public ArrayList<Enrolment> getEnrolment() { return enrolments;}
+    public ArrayList<Enrolment> getEnrolments() { return enrolments;}
     public void enroll(Enrolment enrolment) {
         enrolments.add(enrolment);
         enrolment.getUnit().getEnrolments().add(enrolment);

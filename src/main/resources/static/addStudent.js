@@ -2,7 +2,8 @@ async function save() {
     try {
         let data = {
             name: document.getElementById("name").value,
-            birthDate: LocalDate.parse(document.getElementById("birthDate").value),
+            birthDate: document.getElementById("birthDate").value,
+            email: document.getElementById("email").value,
             gender: document.getElementById("gender").value
         };
         let res = await $.ajax({
