@@ -3,6 +3,8 @@ package com.iade.unimanage.models;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class Student {
     private static int nextNumber = 1;
     private String name;
@@ -10,6 +12,7 @@ public class Student {
     private String email;
     private char gender;
     private int number;
+    // @JsonIgnoreProperties({"students"})
     private ArrayList<Enrolment> enrolments;
 
     public Student(String name, LocalDate birthDate, char gender){

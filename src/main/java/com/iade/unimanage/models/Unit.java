@@ -2,11 +2,14 @@ package com.iade.unimanage.models;
 
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class Unit {
     private static int nextId = 1;
     private int id;
     private String name;
     private int credits;
+    // @JsonIgnoreProperties ({"units"})
     private ArrayList<Enrolment> enrolments;
 
     public Unit(String name, int credits) {
