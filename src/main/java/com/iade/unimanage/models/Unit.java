@@ -9,7 +9,7 @@ public class Unit {
     private int id;
     private String name;
     private int credits;
-    // @JsonIgnoreProperties ({"units"})
+    @JsonIgnoreProperties ({"units"})
     private ArrayList<Enrolment> enrolments;
 
     public Unit(String name, int credits) {

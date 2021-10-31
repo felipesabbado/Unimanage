@@ -12,7 +12,7 @@ public class Student {
     private String email;
     private char gender;
     private int number;
-    // @JsonIgnoreProperties({"students"})
+    @JsonIgnoreProperties({"students"})
     private ArrayList<Enrolment> enrolments;
 
     public Student(String name, LocalDate birthDate, char gender){
