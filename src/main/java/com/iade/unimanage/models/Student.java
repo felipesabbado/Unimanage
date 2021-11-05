@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-public class Student {
+public class Student extends Person {
     private static int nextNumber = 1;
     private String name;
     private LocalDate birthDate;
