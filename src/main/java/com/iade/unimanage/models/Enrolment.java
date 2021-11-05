@@ -3,9 +3,9 @@ package com.iade.unimanage.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 public class Enrolment {
-    @JsonIgnoreProperties({"enrolment"})
+    @JsonIgnoreProperties({"enrolments"})
     private Student student;
-    @JsonIgnoreProperties({"enrolment"})
+    @JsonIgnoreProperties({"enrolments"})
     private Unit unit;
     private double grade;
 
