@@ -15,10 +15,13 @@ public class Student extends Person {
     @JsonIgnoreProperties({"student"})
     private ArrayList<Enrolment> enrolments;
 
+    @Override
+    public String getReference() {
+        return null;
+    }
+
     public Student(String name, LocalDate birthDate, char gender){
-        this.name = name;
-        this.birthDate = birthDate;
-        this.gender = gender;
+        super(name, birthDate, gender);
         this.number = nextNumber;
         nextNumber++;
         email = "";

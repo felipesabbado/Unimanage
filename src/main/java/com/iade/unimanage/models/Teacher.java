@@ -14,7 +14,6 @@ public class Teacher extends Person {
         nextNumber++;
         units = new ArrayList<>();
     }
-
     
     @Override
     public String getReference() {
