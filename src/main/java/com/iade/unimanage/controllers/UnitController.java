@@ -3,8 +3,8 @@ package com.iade.unimanage.controllers;
 import java.util.List;
 
 import com.iade.unimanage.models.Unit;
-import com.iade.unimanage.models.UnitRepository;
 import com.iade.unimanage.models.exceptions.NotFoundException;
+import com.iade.unimanage.models.repositories.UnitRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

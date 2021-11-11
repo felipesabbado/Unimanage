@@ -4,11 +4,11 @@ import java.util.List;
 
 import com.iade.unimanage.models.Enrolment;
 import com.iade.unimanage.models.Student;
-import com.iade.unimanage.models.StudentRepository;
 import com.iade.unimanage.models.Unit;
-import com.iade.unimanage.models.UnitRepository;
 import com.iade.unimanage.models.exceptions.AlredyExistsException;
 import com.iade.unimanage.models.exceptions.NotFoundException;
+import com.iade.unimanage.models.repositories.StudentRepository;
+import com.iade.unimanage.models.repositories.UnitRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

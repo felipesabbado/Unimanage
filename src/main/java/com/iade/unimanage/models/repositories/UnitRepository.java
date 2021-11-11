@@ -1,7 +1,9 @@
-package com.iade.unimanage.models;
+package com.iade.unimanage.models.repositories;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.iade.unimanage.models.Unit;
 
 public class UnitRepository {
     private static ArrayList<Unit> units = new ArrayList<>();

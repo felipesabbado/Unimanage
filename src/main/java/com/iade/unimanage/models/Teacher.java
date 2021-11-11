@@ -17,12 +17,12 @@ public class Teacher extends Person {
     
     @Override
     public String getReference() {
-        return null;
+        return "T"+mecNumber;
     }
 
     @Override
     public String getName() {
-        return "Professor" + name;
+        return "Professor " + name;
     }
 
     public int getMecNumber() {
@@ -33,4 +33,11 @@ public class Teacher extends Person {
         return units;
     }
 
+    public void setMecNumber(int mecNumber) {
+        this.mecNumber = mecNumber;
+    }
+
+    public void setUnits(ArrayList<Unit> units) {
+        this.units = units;
+    }
 }

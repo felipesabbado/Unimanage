@@ -1,4 +1,6 @@
-package com.iade.unimanage.models;
+package com.iade.unimanage.models.repositories;
+
+import com.iade.unimanage.models.Enrolment;
 
 public class EnrolmentRepository {
     public static void populate() {

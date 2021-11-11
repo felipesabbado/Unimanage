@@ -17,7 +17,7 @@ public class Student extends Person {
 
     @Override
     public String getReference() {
-        return null;
+        return "S"+number;
     }
 
     public Student(String name, LocalDate birthDate, char gender){

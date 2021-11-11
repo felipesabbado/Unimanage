@@ -1,8 +1,9 @@
 package com.iade.unimanage;
 
-import com.iade.unimanage.models.EnrolmentRepository;
-import com.iade.unimanage.models.StudentRepository;
-import com.iade.unimanage.models.UnitRepository;
+import com.iade.unimanage.models.repositories.EnrolmentRepository;
+import com.iade.unimanage.models.repositories.StudentRepository;
+import com.iade.unimanage.models.repositories.TeacherRepository;
+import com.iade.unimanage.models.repositories.UnitRepository;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ public class UnimanageApplication {
 		StudentRepository.populate();
 		UnitRepository.populate();
 		EnrolmentRepository.populate();
+		TeacherRepository.populate();
 		SpringApplication.run(UnimanageApplication.class, args);
 	}
 
