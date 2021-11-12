@@ -3,9 +3,12 @@ package com.iade.unimanage.models;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 public class Teacher extends Person {
     private static int nextNumber = 1;
     private int mecNumber;
+    @JsonIgnoreProperties ({"teacher"})
     private ArrayList<Unit> units;
 
     public Teacher(String name, LocalDate birthDate, char gender) {

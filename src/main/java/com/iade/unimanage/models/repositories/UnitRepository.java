@@ -10,12 +10,12 @@ public class UnitRepository {
 
     public static void populate() {
         Unit u;
-        u = new Unit("Matemática Discreta", 6);
+        u = new Unit("Matemática Discreta", 6, TeacherRepository.getTeacher(1));
         units.add(u);
-        units.add(new Unit("Bases de Dados", 6));
-        units.add(new Unit("POO", 6));
-        units.add(new Unit("CC", 3));
-        units.add(new Unit("Projeto Mobile", 3));
+        units.add(new Unit("Bases de Dados", 6, TeacherRepository.getTeacher(2)));
+        units.add(new Unit("POO", 6, TeacherRepository.getTeacher(3)));
+        units.add(new Unit("CC", 3, TeacherRepository.getTeacher(1)));
+        units.add(new Unit("Projeto Mobile", 3, TeacherRepository.getTeacher(2)));
     }
 
     public static List<Unit> getUnits() { return units; }

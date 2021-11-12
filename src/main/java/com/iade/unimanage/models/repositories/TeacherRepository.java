@@ -13,6 +13,10 @@ public class TeacherRepository {
         Teacher t;
         t = new Teacher("Antonio de Souza", LocalDate.parse("1958-01-31"), 'M');
         teachers.add(t);
+        t = new Teacher("Eduarda Pinheiro", LocalDate.parse("1972-10-23"), 'F');
+        teachers.add(t);
+        t = new Teacher("Maria Firmina dos Reis", LocalDate.parse("1964-06-12"), 'F');
+        teachers.add(t);
     }
 
     public static ArrayList<Teacher> getTeachers(){

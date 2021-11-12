@@ -18,4 +18,18 @@ public abstract class Person {
     public abstract String getReference();
 
     public abstract String getName();
+    
+    public void setName(String name) {this.name = name;}
+    
+    public LocalDate getBirthDate() { return birthDate;}
+    
+    public void setBirthDate(LocalDate birthDate) { this.birthDate = birthDate; }
+    
+    public String getEmail() { return email; }
+    
+    public void setEmail(String email) { this.email = email; }
+    
+    public char getGender() { return gender; }
+    
+    public void setGender(char gender) { this.gender = gender; }
 }

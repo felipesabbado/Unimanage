@@ -13,9 +13,9 @@ public class UnimanageApplication {
 
 	public static void main(String[] args) {
 		StudentRepository.populate();
+		TeacherRepository.populate();
 		UnitRepository.populate();
 		EnrolmentRepository.populate();
-		TeacherRepository.populate();
 		SpringApplication.run(UnimanageApplication.class, args);
 	}
 

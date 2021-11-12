@@ -7,10 +7,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 public class Student extends Person {
     private static int nextNumber = 1;
-    private String name;
-    private LocalDate birthDate;
-    private String email;
-    private char gender;
     private int number;
     @JsonIgnoreProperties({"student"})
     private ArrayList<Enrolment> enrolments;
@@ -31,20 +27,6 @@ public class Student extends Person {
     public static int getNextNumber() { return nextNumber; }
     
     public String getName() { return name; }
-    
-    public void setName(String name) {this.name = name;}
-    
-    public LocalDate getBirthDate() { return birthDate;}
-    
-    public void setBirthDate(LocalDate birthDate) { this.birthDate = birthDate; }
-    
-    public String getEmail() { return email; }
-    
-    public void setEmail(String email) { this.email = email; }
-    
-    public char getGender() { return gender; }
-    
-    public void setGender(char gender) { this.gender = gender; }
     
     public int getNumber() { return number; }
     
